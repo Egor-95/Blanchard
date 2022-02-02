@@ -1,0 +1,602 @@
+
+
+:root {
+    --color-link-hover: #c283f3;
+    --color-link-active:#7943A4;
+    --purpl-color: #9D5CD0;
+    --btn-color-btn: #D1A9F0;
+    --black-color:  #000000;
+    --color-white: #ffffff;
+    --color-white-opacity: rgba(255, 255, 255, 0.85);
+  }
+
+
+
+
+@media (max-width: 1400px) {
+
+    .header__nav {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    /* header */
+
+
+    .container {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .logo {
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+   .header__nav,.header__bottom,.enter,.header__logo {
+     display: none;
+   }
+   .mobail__search__container,.burger__menu,.mobail__logo{
+       display: block;
+   }
+
+   .header__burger {
+    display: block;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .burger__menu { position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 40px;
+    width: 40%;
+    height: max-content;
+    opacity: 0;
+    z-index: 3;
+    transform: translateX(-100%);
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+  }
+  .burger__menu.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .burger__close {
+    margin-bottom: 22px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    transition: fill .3s ease-in-out;
+    
+  }
+
+  .burger__close:hover rect {
+    fill: var(--color-link-hover);
+  }
+  .burger__close:active rect {
+    fill: var(--color-link-activer);
+  }
+
+ 
+  .burger__menu__item:not(:last-child ) {
+      margin-bottom: 10px;
+  }
+
+  .burger__menu__item:last-child {
+      margin-top: 250px;
+  }
+
+  .menu__burger__btm {
+    position: absolute;
+    margin-left: 9px;
+    padding: 10px 31px;
+    bottom: 50px;
+    border: 2px solid var(--purpl-color);
+    border-radius: 100px;
+    background: transparent;
+    font-weight: 600;
+    line-height: 25px;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+    outline: none;
+  }
+
+  
+
+
+  .form-btn__open, .form-btn__submit {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-image .3s ease-in-out;
+  }
+
+  .form-btn__open path,
+  .form-btn__open rect,
+  .form-btn__submit path,
+  .form-btn__submit rect {
+  transition: fill .3s ease-in-out;
+}
+  .form-btn__open:hover path,
+  .form-btn__open:hover rect,
+  .form-btn__submit:hover path,
+  .form-btn__submit:hover rect {
+  fill: var(--color-link-hover);
+}
+
+.form-btn__submit {
+    margin-right: 20px;
+  }
+  .form-btn__open {
+    transition: opacity .3s ease-in-out;
+  }
+  .form-btn__open.active {
+    opacity: 0;
+  }
+
+  .mobail__search__form {
+    display: flex;
+    align-items: center;
+    width: 240px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translate(150%, -50%);
+    background-color: transparent;
+    opacity: 0;
+    transition: transform .3s ease-in-out, opacity .6s ease-in-out .2s;
+  }
+
+  .mobail__search__container:hover .form__input {
+    border-color: var(--color-link-hover);
+  }
+  
+  .form__input:focus {
+    border-color: var(--color-link-active);
+  }
+
+  input.form__input::placeholder {
+    color: var(--color-white-opacity);
+  }
+  
+  input.form__input::-webkit-input-placeholde {
+    color: var(--color-white-opacity);
+  }
+  
+  input.form__input:-ms-input-placeholder {
+    color: var(--color-white-opacity);
+  }
+  
+  input.form__input::-ms-input-placeholder {
+    color: var(--color-white-opacity);
+  }
+  
+   .form__input:focus {
+    color: var(--color-link-hover);
+    outline: none;
+  }
+
+  .form__input {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    top: 2px;
+    border-bottom: 1px solid var(--color-white-opacity);
+    color: var(--color-white-opacity);
+    font-size: 18px;
+    transition: color .3s ease-in-out, border-color .3s ease-in-out;
+  }
+  .form__input:focus-visible {
+    outline: 0;
+    opacity: 0.8;
+  }
+  
+  
+  .form__active {
+    transform: translate(-85%, -50%);
+    opacity: 1;
+  }
+
+  /* hero */
+
+  .hero {
+    height: 768px;
+  }
+  
+  .hero-content {
+    top: 213px;
+  }
+
+  .hero-content__heading {
+    margin-bottom: 10px;
+  }
+
+  .hero-content__text {
+    width: 665px;
+    margin-bottom: 133px;
+  }
+
+  .hero-content__btn {
+    padding: 20px 37px;
+  }
+
+  .hero-slide1 {
+    background-image: url('../img/hero-slide1mobail1024.jpg');
+  }
+  .hero-slide2 {
+    background-image: url('../img/hero-slide2mobail1024.jpg');
+  }
+  .hero-slide3 {
+    background-image: url('../img/hero-slide3mobail1024.jpg');
+  }
+
+ 
+}
+
+/* about */
+
+.about {
+  margin-top: 668px;
+  margin-bottom: 111px;
+}
+
+/* gallery */
+
+.gallery {
+  background-image: url('../img/section-gallery.mobail-bg1024.jpg');
+  padding-bottom: 40px;
+}
+
+.select-custom__wrap {
+  width: 34%;
+}
+
+.gallery__checkbox {
+  margin-top: 87px;
+}
+
+.gallery-slide1 {
+  background-image: url('../img/gallery-slide1mobail1024.jpg');
+}
+.gallery-slide2 {
+  background-image: url('../img/gallery-slide2mobail1024.jpg');
+}
+.gallery-slide3 {
+  background-image: url('../img/gallery-slide3mobail1024.jpg');
+}
+.gallery-slide4 {
+  background-image: url('../img/gallery-slide4mobail1024.jpg');
+}
+.gallery-slide5 {
+  background-image: url('../img/gallery-slide5mobail1024.jpg');
+}
+.gallery-slide6 {
+  background-image: url('../img/gallery-slide6mobail1024.jpg');
+}
+
+
+.swiper-right--content .swiper-wrapper {
+  height: 315px;
+}
+
+@media (max-width: 768px) {
+
+
+  /* header */
+
+  .mobail__search__form {
+    width: 198px;
+  }
+
+  .form__input {
+    width: 198px;
+  }
+
+
+  /* hero */
+
+  .hero-slide1 {
+    background-image: url('../img/hero-slide1mobail768.jpg');
+  }
+  .hero-slide2 {
+    background-image: url('../img/hero-slide2mobail768.jpg');
+  }
+  .hero-slide3 {
+    background-image: url('../img/hero-slide3mobail768.jpg');
+  }
+
+
+  /* aboun */
+
+  .about {
+    margin-bottom: 208px;
+}
+
+
+/* gallery */
+
+
+.gallery {
+  background-image: url('../img/section-gallery.mobail-bg768.jpg');
+  padding-bottom: 127px;
+}
+
+.gallery__wrap {
+
+  flex-direction: column;
+}
+
+
+.select-custom__wrap {
+  width: 42%;
+}
+
+
+.gallery__checkbox {
+  margin-top: 21px;
+}
+
+
+.swiper-right--content {
+  width: 100%;
+  top: 46px;
+  margin-left: 0;
+}
+
+.swiper-right--content .swiper-wrapper {
+  height: 329px;
+}
+
+.gallery-slide1 {
+  background-image: url('../img/gallery-slide1mobail788.jpg');
+}
+.gallery-slide2 {
+  background-image: url('../img/gallery-slide2mobail788.jpg');
+}
+.gallery-slide3 {
+  background-image: url('../img/gallery-slide3mobail788.jpg');
+}
+.gallery-slide4 {
+  background-image: url('../img/gallery-slide4mobail788.jpg');
+}
+.gallery-slide5 {
+  background-image: url('../img/gallery-slide5mobail788.jpg');
+}
+.gallery-slide6 {
+  background-image: url('../img/gallery-slide6mobail788.jpg');
+}
+
+
+}
+
+
+@media (max-width: 726px) {
+
+
+  /* header */
+
+
+  .burger_svg1024,.mobail__logo,.search1024 {
+    display: none;
+  }
+
+  .burger_svg320,.logo320,.search320 {
+    display: block;
+  }
+
+  .form__input {
+
+    font-size: 14px;
+  }
+
+  .burger__menu  {
+
+    width: 320px;
+  }
+
+  
+
+  /* hero */
+
+  .hero-content__heading {
+   
+    margin-bottom:30px;
+    font-size: 56px;
+    line-height: 58px;
+}
+
+  .hero-content__text {
+    width: 512px;
+}
+
+  /* about */
+
+  .about__text {
+
+    max-height: none;
+  }
+ 
+
+
+}
+
+
+@media screen and (max-width: 576px) {
+
+  .container {
+    max-width: 340px;
+    padding-left: 10px;
+    padding-right: 10px
+  }
+
+  /* header */
+
+
+  .header {
+    height: 45px;
+}
+
+.header__burger {
+ 
+}
+
+.mobail__search__container {
+ 
+  padding-top: 5px;
+}
+
+.logo {
+  margin-top: 5px;
+  margin-right: auto;
+  margin-left: 72px;
+}
+
+
+/* hero */
+
+.hero {
+  height: 355px;
+}
+
+.hero-content {
+  top: 74px;
+  padding: 0;
+}
+
+.hero-content__heading { 
+ font-size: 32px;
+ line-height: 41px;
+ width: 320px;
+ text-align: center;
+ width: 279px;
+ padding-left: 15px;
+ margin-bottom: 9px;
+
+}
+
+.hero-content__text {
+  width: 292px;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 0px 15px;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 41px
+}
+
+.hero-content__btn {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 9px 18px;
+  margin-left: 45px;
+}
+
+
+.hero-slide1 {
+  background-image: url('../img/hero-slide1mobail320.jpg');
+}
+.hero-slide2 {
+  background-image: url('../img/hero-slide2mobail320.jpg');
+}
+.hero-slide3 {
+  background-image: url('../img/hero-slide3mobail320.jpg');
+}
+
+
+/* about */
+
+.about {
+  margin-top: 279px;
+  margin-bottom: 41px;
+}
+
+
+.site-heading {
+  font-size: 28px;
+  line-height: 38px;
+}
+
+.about__heading {
+  margin: 0px 0px 12px;
+}
+
+.about__text {
+  font-size: 14px;
+  line-height: 28px;
+}
+
+
+/* gallery */
+
+.gallery {
+  padding-top: 50px;
+  padding-bottom: 86px;
+}
+
+.select-custom__heading {
+  margin-top: 14px;
+  margin-bottom: 5px;
+}
+
+.select-custom__wrap {
+  width: 100%;
+}
+
+.gallery__checkbox {
+  margin-top: 10px;
+}
+
+
+  .swiper-right--content {
+    height: auto;
+    top: 36px;
+    height: 418px;
+    display: flex;
+    flex-direction: column;
+  }
+  .swiper-right--content .swiper-wrapper {
+    order: 1;
+    margin-bottom: 40px;
+  }
+  .swiper-right-btns {
+    position: relative;
+    top: 19px;
+    left: 77px;
+    order: 2;
+    margin-bottom: 0;
+  }
+  .swiper-left--content {
+    margin-bottom: 40px;
+  }
+
+  .gallery-slide1 {
+    background-image: url('../img/gallery-slide1mobail320.jpg');
+  }
+  .gallery-slide2 {
+    background-image: url('../img/gallery-slide2mobail320.jpg');
+  }
+  .gallery-slide3 {
+    background-image: url('../img/gallery-slide3mobail320.jpg');
+  }
+  .gallery-slide4 {
+    background-image: url('../img/gallery-slide4mobail320.jpg');
+  }
+  .gallery-slide5 {
+    background-image: url('../img/gallery-slide5mobail320.jpg');
+  }
+  .gallery-slide6 {
+    background-image: url('../img/gallery-slide5mobail320.jpg');
+  }
+}
